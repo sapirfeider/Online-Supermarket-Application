@@ -1,0 +1,6 @@
+product name : Orange  1 units      7₪
+            
+product name : tomato  3 units      10.5₪
+            
+product name : Tenova Milk  1 units      5.900000095367432₪
+            

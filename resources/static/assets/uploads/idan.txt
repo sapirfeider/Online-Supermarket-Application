@@ -1,0 +1,14 @@
+product name : cucumber   4 units      16₪
+            
+product name : White Onion  3 units      15₪
+            
+product name : Garlic Cloves  4 units      36₪
+            
+product name : Champignon Mushrooms  2 units      28₪
+            
+product name : Red----Pepper  1 units      5₪
+            
+product name : WOW tomato  3 units      14.25₪
+            
+product name : Yellow Pepper  2 units      10₪
+            
