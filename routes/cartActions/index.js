@@ -21,32 +21,18 @@ router.post("/checkIfCartExist", async (req, res, next) => {
 
     const { customer_id } = req.body
 
-    console.log("typeof customer_id:", typeof (customer_id))
-
-    console.log("typeof:", typeof (customer_id))
-
-    console.log("typeof:", typeof (customer_id))
-
     if (!customer_id || typeof (customer_id) !== "number")
         return next({ message: "customer_id parameter is missing", status: 400 })
 
     try {
         let shopping_cart_id = null
         const userHasCart = await isCartExist(customer_id);
-
-        console.log("userHasCart", userHasCart)
-        console.log(userHasCart)
-        console.log(userHasCart)
         if (!userHasCart.length) {
             const newCart = await createCartShop(customer_id);
             console.log("newCart", newCart)
             shopping_cart_id = newCart.insertId
         } else
             shopping_cart_id = userHasCart[0].id
-
-        console.log("shopping_cart_id :", shopping_cart_id)
-        console.log(shopping_cart_id)
-        console.log(shopping_cart_id)
         res.json({ id: shopping_cart_id })
 
     } catch (error) {

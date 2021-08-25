@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\FullStack\modol4\online_supermarket_app\online_supermarket\client\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\FullStack\modol4\Online_Supermarket_Official\client\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -543,11 +543,14 @@ class HomePageComponent {
                 this.authService.userConnected = true;
                 if (info.role === 1)
                     return;
+                console.log("home page constructor");
                 this.getLiveReport();
                 this.userShoppingDetails();
             }
-            else
+            else {
+                console.log("else - home page constructor");
                 this.authService.userConnected = false;
+            }
         });
     }
     ngOnInit() {
@@ -2436,32 +2439,9 @@ class AdminControlService {
     }
     updateProductFromDB(productUpdate) {
         const result = this.http.post(`/admin/updateProduct`, productUpdate, this.httpOptions).toPromise();
-        // result.then(
-        //   (result)=>{
-        //     console.log(result)
-        //     //need to create socket channel that update//
-        //     //need to create listener in the relevant component -> socket.on ->
-        //     //i need to update product and sent the updated list. 
-        //     //from server side i need to do additional request to DB and emit the updated list. 
-        //   },
-        //   (error)=>{
-        //     console.log(error)
-        //     alert("Something went wrong...")
-        //   }
-        // )
     }
     addProductToDB(new_product) {
         const result = this.http.post(`/admin/addProduct`, new_product, this.httpOptions).toPromise();
-        // result.then(
-        //   (result)=>{
-        //     console.log(result)
-        //     //need to create socket channel that update//
-        //   },
-        //   (error)=>{
-        //     console.log(error)
-        //     alert("Something went wrong...")
-        //   }
-        // )
     }
 }
 AdminControlService.ɵfac = function AdminControlService_Factory(t) { return new (t || AdminControlService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_auth_user_auth_user_service__WEBPACK_IMPORTED_MODULE_3__["AuthUserService"])); };
@@ -3454,7 +3434,7 @@ class LogoLineComponent {
         localStorage.clear();
         this.authUserService.onUserLogin({});
         this.authUserService.userConnected = false;
-        this.router.navigate(['/**']);
+        this.router.navigate(['/']);
     }
 }
 LogoLineComponent.ɵfac = function LogoLineComponent_Factory(t) { return new (t || LogoLineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_auth_user_auth_user_service__WEBPACK_IMPORTED_MODULE_1__["AuthUserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_cart_actions_cart_actions_service__WEBPACK_IMPORTED_MODULE_3__["CartActionsService"])); };
