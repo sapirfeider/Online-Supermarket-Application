@@ -7,11 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\FullStack\modol4\Online_Supermarket_Official\client\src\polyfills.ts */"hN/g");
-=======
 module.exports = __webpack_require__(/*! C:\FullStack\modol4\online_supermarket_app\online_supermarket\client\src\polyfills.ts */"hN/g");
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
 
 
 /***/ }),

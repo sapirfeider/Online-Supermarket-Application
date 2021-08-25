@@ -20,22 +20,23 @@ router.use(async (req, res, next) => {
 router.post("/checkIfCartExist", async (req, res, next) => {
 
     const { customer_id } = req.body
-<<<<<<< HEAD
+
     console.log("typeof customer_id:", typeof (customer_id))
-=======
+
     console.log("typeof:", typeof (customer_id))
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
+
+    console.log("typeof:", typeof (customer_id))
+
     if (!customer_id || typeof (customer_id) !== "number")
         return next({ message: "customer_id parameter is missing", status: 400 })
 
     try {
         let shopping_cart_id = null
         const userHasCart = await isCartExist(customer_id);
-<<<<<<< HEAD
+
         console.log("userHasCart", userHasCart)
-=======
         console.log(userHasCart)
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
+        console.log(userHasCart)
         if (!userHasCart.length) {
             const newCart = await createCartShop(customer_id);
             console.log("newCart", newCart)
@@ -43,11 +44,9 @@ router.post("/checkIfCartExist", async (req, res, next) => {
         } else
             shopping_cart_id = userHasCart[0].id
 
-<<<<<<< HEAD
         console.log("shopping_cart_id :", shopping_cart_id)
-=======
         console.log(shopping_cart_id)
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
+        console.log(shopping_cart_id)
         res.json({ id: shopping_cart_id })
 
     } catch (error) {

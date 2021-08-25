@@ -7,11 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\FullStack\modol4\Online_Supermarket_Official\client\src\main.ts */"zUnb");
-=======
 module.exports = __webpack_require__(/*! C:\FullStack\modol4\online_supermarket_app\online_supermarket\client\src\main.ts */"zUnb");
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
 
 
 /***/ }),
@@ -547,22 +543,11 @@ class HomePageComponent {
                 this.authService.userConnected = true;
                 if (info.role === 1)
                     return;
-<<<<<<< HEAD
-                console.log("home page constructor");
-                this.getLiveReport();
-                this.userShoppingDetails();
-            }
-            else {
-                console.log("else - home page constructor");
-                this.authService.userConnected = false;
-            }
-=======
                 this.getLiveReport();
                 this.userShoppingDetails();
             }
             else
                 this.authService.userConnected = false;
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
         });
     }
     ngOnInit() {
@@ -2451,11 +2436,6 @@ class AdminControlService {
     }
     updateProductFromDB(productUpdate) {
         const result = this.http.post(`/admin/updateProduct`, productUpdate, this.httpOptions).toPromise();
-<<<<<<< HEAD
-    }
-    addProductToDB(new_product) {
-        const result = this.http.post(`/admin/addProduct`, new_product, this.httpOptions).toPromise();
-=======
         // result.then(
         //   (result)=>{
         //     console.log(result)
@@ -2482,7 +2462,6 @@ class AdminControlService {
         //     alert("Something went wrong...")
         //   }
         // )
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
     }
 }
 AdminControlService.ɵfac = function AdminControlService_Factory(t) { return new (t || AdminControlService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_auth_user_auth_user_service__WEBPACK_IMPORTED_MODULE_3__["AuthUserService"])); };
@@ -3475,11 +3454,7 @@ class LogoLineComponent {
         localStorage.clear();
         this.authUserService.onUserLogin({});
         this.authUserService.userConnected = false;
-<<<<<<< HEAD
-        this.router.navigate(['/']);
-=======
         this.router.navigate(['/**']);
->>>>>>> 5a6d141a4e63e2d060b1d6acee75e95eafedd2b5
     }
 }
 LogoLineComponent.ɵfac = function LogoLineComponent_Factory(t) { return new (t || LogoLineComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_auth_user_auth_user_service__WEBPACK_IMPORTED_MODULE_1__["AuthUserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_cart_actions_cart_actions_service__WEBPACK_IMPORTED_MODULE_3__["CartActionsService"])); };
